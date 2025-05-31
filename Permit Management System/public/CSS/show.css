@@ -1,0 +1,77 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url(/assets/images//1327.jpg) center / cover;;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.pagecontent {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pageheader {
+    text-align: center;
+    background: rgb(45, 71, 117);
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+h1, h2 {
+    color: rgb(45,71,117);
+}
+
+/* Personal & Course Details */
+.pagedetails {
+    padding: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+p strong {
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-success { background-color: #28a745; }
+.btn-danger { background-color: #dc3545; }
+.btn-warning { background-color: #ffc107; color: #333; }
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(45,71,117);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

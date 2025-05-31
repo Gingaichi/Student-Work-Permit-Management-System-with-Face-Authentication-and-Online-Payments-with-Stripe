@@ -1,0 +1,618 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Container and Header */
+.container {
+    position:absolute;
+    right: 0;
+    width:80vw;
+    height:100vh;
+    background: rgb(176, 211, 226);
+}
+
+.container .header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    height: 10vh;
+    background: rgb(33, 41, 47);
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+.container .header .nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+.container .header .nav .search{
+    flex:3;
+    display: flex;
+    justify-content: center;
+
+}
+.container .header .nav .search input[type=text]{
+    border: none;
+    background: rgb(180, 215, 216);
+    padding: 10px;
+    width: 50%;
+}
+.container .header .nav .search button{
+    width: 20px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .header .nav .search button img{
+    width: 20px;
+    height: 40px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnx{
+    background: #2c3e50;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.btnx:hover{
+    color: #2980b9;
+    background: wheat;
+    padding: 3px 8px;
+    width: 80vw;
+    height: 100vh;
+}
+
+.container .header .nav .user{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.container .header .nav .user img{
+    width: 40px;
+    height: 40px;
+}
+
+.container .header .nav .user .img-case{
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+}
+.container .header .nav .user .img-case img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.container .content {
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+
+.container .content .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.container .content .cards .card{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.container .content .cards .card:hover{
+    transform: translateY(-5px);
+}
+
+.container .content .cards .card .box{
+    padding: 20px;
+    height: 100%;
+}
+
+.container .content .cards .card .box h2{
+    color: rgb(45, 71, 117);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.container .content .cards .card .status-info, .container .content .cards .card .appointment-info, .container .content .cards .card .edit-info{
+    padding: 15px 0;
+}
+
+.container .content .cards .card .status-info span{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.container .content .cards .card .status-info span.pending{
+    background-color: #ffd700;
+    color: #000;
+}
+
+.container .content .cards .card .status-info span.approved{
+    background-color: #90EE90;
+    color: #006400;
+}
+
+.container .content .cards .card .status-info span.rejected{
+    background-color: #ffcccb;
+    color: #8b0000;
+}
+
+.container .content .cards .card .status-info span.correction{
+    background-color: #87CEEB;
+    color: #000080;
+}
+
+.container .content .cards .card .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(45, 71, 117);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.container .content .cards .card .btn:hover{
+    background-color: rgb(60, 95, 153);
+}
+
+.container .content .cards .card .icon-case{
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.container .content .cards .card .icon-case img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+
+
+
+
+.container .content .cards .card{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.container .content .cards .card:hover{
+    transform: translateY(-5px);
+}
+
+.container .content .cards .card .box{
+    padding: 20px;
+    height: 100%;
+}
+
+.container .content .cards .card .box h2{
+    color: rgb(45, 71, 117);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.container .content .cards .card .status-info, .container .content .cards .card .appointment-info, .container .content .cards .card .edit-info{
+    padding: 15px 0;
+}
+
+.container .content .cards .card .status-info span{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.container .content .cards .card .status-info span.pending{
+    background-color: #ffd700;
+    color: #000;
+}
+
+.container .content .cards .card .status-info span.approved{
+    background-color: #90EE90;
+    color: #006400;
+}
+
+.container .content .cards .card .status-info span.rejected{
+    background-color: #ffcccb;
+    color: #8b0000;
+}
+
+.container .content .cards .card .status-info span.correction{
+    background-color: #87CEEB;
+    color: #000080;
+}
+
+.container .content .cards .card .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(45, 71, 117);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.container .content .cards .card .btn:hover{
+    background-color: rgb(60, 95, 153);
+}
+
+.container .content .cards .card .icon-case{
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.container .content .cards .card .icon-case img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+
+
+.container .content .cards .card{
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.container .content .cards .card:hover{
+    transform: translateY(-5px);
+}
+
+.container .content .cards .card .box{
+    padding: 20px;
+    height: 100%;
+}
+
+.container .content .cards .card .box h2{
+    color: rgb(45, 71, 117);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.container .content .cards .card .status-info, .container .content .cards .card .appointment-info, .container .content .cards .card .edit-info{
+    padding: 15px 0;
+}
+
+.container .content .cards .card .status-info span{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.container .content .cards .card .status-info span.pending{
+    background-color: #ffd700;
+    color: #000;
+}
+
+.container .content .cards .card .status-info span.approved{
+    background-color: #90EE90;
+    color: #006400;
+}
+
+.container .content .cards .card .status-info span.rejected{
+    background-color: #ffcccb;
+    color: #8b0000;
+}
+
+.container .content .cards .card .status-info span.correction{
+    background-color: #87CEEB;
+    color: #000080;
+}
+
+.container .content .cards .card .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(45, 71, 117);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.container .content .cards .card .btn:hover{
+    background-color: rgb(60, 95, 153);
+}
+
+.container .content .cards .card .icon-case{
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.container .content .cards .card .icon-case img{
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+}
+
+.container .content .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .content .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Increased from 300px to 350px */
+    gap: 30px; /* Increased from 20px to 30px for better spacing */
+    padding: 20px;
+}
+
+.container .content .cards .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    height: auto;
+    min-height: 250px; /* Increased from 200px to 250px */
+}
+
+
+.container .content .cards .card .icon-case img{
+    height: 50px;
+    width: 50px;
+}
+
+.container .content .content-2{
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.container .content .content-2 .recent-applications{
+    min-height: 50vh;
+    flex: 5;
+    background: rgb(45, 71, 117);
+    margin: 0 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    display: flex;
+    flex-direction: column;
+}
+
+.container .content .content-2 .new-applications{
+    flex: 2;
+    background: rgb(45, 71, 117);
+    min-height: 50vh;
+    margin: 0 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5),0 6px 20px 0 rgba(0, 0, 0, 0.69);
+    
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-bottom: 2px solid #999;
+}
+
+table{
+    padding: 10px;
+
+}
+
+th,td{
+text-align: left;
+padding: 8px;
+}
+
+#notificationModal {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 250px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+#notificationModal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#notificationModal li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#notificationModal li:last-child {
+    border-bottom: none;
+}
+
+.notification-badge {
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    position: relative;
+    top: -5px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload span {
+    margin-left: 10px;
+    color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    width: 80%;
+    margin: 20px 0 20px 20px; /* Aligned with other nav items */
+    padding: 12px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form containing the logout button */
+.sidebar ul li form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Add some space between sidebar menu items */
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+/* Style other sidebar links to match the theme */
+.sidebar ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+

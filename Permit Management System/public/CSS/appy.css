@@ -1,0 +1,113 @@
+/* public/css/app.css */
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background:url(/assets/images//siu.jpg) center / cover;;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container class to center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.cont{
+    max-width: 1500px;
+    margin: 30px auto;
+    padding: 80px;
+    background: rgb(166, 170, 231);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    color: black;
+}
+
+
+/* Header and title */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Form input styling */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #65a7ca;
+}
+
+/* Success message styling */
+.success-message {
+    padding: 20px;
+    background-color: #dff0d8;
+    border-radius: 5px;
+    color: #3c763d;
+    margin-top: 20px;
+}
+
+.error-message {
+    padding: 20px;
+    background-color: #f2dede;
+    border-radius: 5px;
+    color: #a94442;
+    margin-top: 20px;
+}

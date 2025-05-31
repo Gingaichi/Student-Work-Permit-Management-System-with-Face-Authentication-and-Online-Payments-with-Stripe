@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background:url(/assets/images//siu.jpg) center / cover;;
+    margin: 0;
+    padding: 0;
+    
+}
+.xmad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header, footer {
+    background-color: #334d5e;
+    color: #e0f2f7;
+    padding: 10px 0;
+    text-align: center;
+    position: static;
+}
+header h1 {
+  margin:0; /*remove margin from h1*/
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    background-color: rgb(45, 71, 117);
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 10px;
+}
