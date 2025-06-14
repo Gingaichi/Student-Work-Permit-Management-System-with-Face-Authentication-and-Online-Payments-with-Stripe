@@ -14,3 +14,14 @@
 .DS_Store
 Thumbs.db
 *.log
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+myenv/
+node_modules/
+*.log
+.DS_Store
+*.dat
+
