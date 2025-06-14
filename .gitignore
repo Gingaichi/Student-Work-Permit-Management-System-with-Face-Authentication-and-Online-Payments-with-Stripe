@@ -24,4 +24,5 @@ node_modules/
 *.log
 .DS_Store
 *.dat
+face_auth/myenv/
 
