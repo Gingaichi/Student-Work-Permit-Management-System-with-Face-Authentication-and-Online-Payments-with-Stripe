@@ -1,0 +1,27 @@
+# Laravel
+/vendor
+/node_modules
+/storage/*.key
+/public/storage
+/public/hot
+/storage/logs
+/storage/framework/sessions
+/storage/framework/views
+/storage/framework/cache
+
+# Env & config
+.env
+.env.*
+*.log
+*.sqlite
+
+# OS & IDE
+.DS_Store
+.idea
+.vscode
+*.swp
+*.swo
+
+# Git
+.git
+.gitignore

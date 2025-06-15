@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  permit_management_system:
+    build:
+      context: ./Permit_Management_System
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"  # Access Laravel app at http://localhost:8080
+    environment:
+      - DB_HOST=db
+      - DB_DATABASE=immigration
+      - DB_USERNAME=root
+      - DB_PASSWORD=Villabeach12!
+      # Add other Laravel env vars as needed
+    depends_on:
+      - db
+   
+  face_auth:
+    build:
+      context: ./face_auth
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"  # Flask app accessible on localhost:5001
+    environment:
+      - FLASK_APP=app.py
+      # Add other env vars your Flask app needs
+    depends_on:
+      - db
+
+  permit_image_checker:
+    build:
+      context: ./permit_image_checker
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"  # Adjust port if needed
+    environment:
+      - FLASK_APP=flask_app.py
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Villabeach12!
+      MYSQL_DATABASE: immigration
+     # MYSQL_USER: root
+     # MYSQL_PASSWORD: Villabeach12!
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
